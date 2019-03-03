@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trail Traveler</title>
+  <!--<link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <style>
+    #map{ height:400px;
+          width:100%;}
+    .bg-img {
+      background-image: url(../runner.jpg) ;
+      background-position: center center;
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
+      background-color: #999;
+    }
+    .bg-img2 {
+      background-image: url(../backpack.jpg) ;
+      background-position: center center;
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
+      background-color: #999;
+    }
+    .transpar{
+      opacity : .96;
+    }.transpar2{
+      opacity : .8;
+    }.transpar3{
+      opacity:.7;
+    }
+
+  </style>
+ <!--<script async type="text/javascript" src="../js/bulma.js"></script> -->
+
+  <!-- Bulma Version 0.7.4-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.min.css" />
+  <!--<link rel="stylesheet" type="text/css" href="../css/landing.css"> -->
+
+</head>
+
+<body>
+  <!-- Intro Page -->
+  <section class="hero is-medium is-dark is-fullheight bg-img">
+    <div class="hero-head">
+      <header class="navbar is-fixed-top">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroB" class="navbar-menu is-fixed-top">
+            <div class="navbar-end is-fixed-top">
+              <a class="navbar-item is-fullheight" href="">
+                Home
+              </a>
+              <a class="navbar-item is-inverted" href="#trails">
+                Find a Trail
+              </a>
+
+
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="hero-body is-centered">
+      <div class="container  has-text-centered is-centered has-text-centered">
+        <div class=" hero column is-dark is-one-quarter transpar3 box is-centered has-text-centered">
+          <p class="title has-text-white">
+            Trail Traveler
+          </p>
+          <p class="subtitle">
+            Know, before you go.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Questionaire Section  -->
+  <section class="section is-dark bg-img2" id="trails">
+    <div class="container is-dark transpar">
+      <div class="card-content is-dark has-text-centered is-centered">
+          <div class="card-content">
+              <div class="hero ">
+                <div class="card-content column">
+                  <div class="hero card-content is-white box is-fullwidth transpar2 ">
+                    <p class="is-size-3 has-text-centered "><strong>
+                      Ensure safety on the trails</strong>
+                    </p>
+                  </div>
+                  <div class="card box hero is-light is-fullwidth">
+                    <div class="column is-centered is-narrow">
+                      <div class="card-content">
+                        <p class="subtitle has-text-dark">
+                          What would you rate your hiking level at?
+                        </p>
+                      </div>
+                      <div class="column is-fullwidth is-centered is-narrow">
+                        <div class="select is-rounded">
+                          <select id="rating">
+                            <option value="beg"> Beginner (0-25 miles)</option>
+                            <option value="nov"> Novice (25-100 miles)</option>
+                            <option value="adv"> Advanced (100-150 miles)</option>
+                            <option value="exp"> Expert(150+ miles)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="box column card hero is-fullwidth is-light is-narrow">
+                      <div class="columns is-vcentered is-centered is-multiline">
+                        <div class="card-content column is-centered is-fullwidth">
+                          <div class="card-content ">
+                            <p class="subtitle has-text-dark">
+                              How many people do you intend on going with?
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-content column is-centered is-fullwidth">
+                          <div class="select is-rounded">
+                            <select id="numBud">
+                              <option value="none"> Only Me </option>
+                              <option value="one"> 1 Other </option>
+                              <option value="enough"> 2 Others </option>
+                              <option value="enough"> 3 Others </option>
+                              <option value="enough"> 4 Others </option>
+                              <option value="enough"> 5 or more Others </option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="box column card hero is-fullwidth is-light is-narrow">
+                        <div class="columns is-vcentered is-centered is-multiline">
+                          <div class="card-content column is-centered is-fullwidth">
+                            <div class="card-content ">
+                              <p class="subtitle has-text-dark">
+                                How many trails would you like us to recommend?
+                              </p>
+                            </div>
+                          </div>
+                          <div class="card-content column is-centered is-fullwidth">
+                            <div class="select is-rounded">
+                              <select id="numTrails">
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                </div>
+              </div>
+              <div class="column is-centered">
+                <div class="columns is-centered card-content">
+                  <div class="column control has-text-centered">
+                    <button class="button is-link has-text-centered is-large" id="submit" onclick="displayPark()"> Find my Park </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    </section>
+    <!-- Display Suggested Shoe Section -->
+    <div id="showParks" hidden>
+     <section class="section is-dark has-background-black" >
+      <div class="box card is-dark">
+        <div class="columns">
+          <div class="column ">
+            <div>
+                <iframe id="map" src="" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+            </div>
+          </div>
+          <div class="column">
+            <div class="columns is-vcentered">
+              <div class="column is-two-thirds has-text-centered is-vc">
+                <p class="is-size-2" id="trailName">
+                </p>
+              </div>
+              <div class="column">
+                <p class="is-size-2 is-family-code" id="">
+                  <img src=""/>
+                </p>
+              </div>
+            </div>
+            <div class="columns is-multiline">
+              <div class="column is-full">
+                <p class="is-size-4"id="trailInfo">
+                </p>
+              </div>
+              <div class="column is-full" >
+                <p class="is-size-4" id="trailDist">
+                </p>
+              </div>
+              <div class="column is-full" >
+                <p class="is-size-4 has-text-dark" id="trailDiff" >
+                </p>
+              </div>
+            </div>
+            <div class="columns is-multiline has-text-left">
+              <div class="column">
+                <p class="has-text-grey-light">
+                  What gear should I bring?
+                </p>
+                <p id="gearRec">
+
+                </p>
+              </div>
+            </div>
+            <div class ="columns is-multiline has-text-left">
+              <div class="column">
+                <p class="has-text-grey-light">
+                  Do I have enough buddies?
+                </p>
+                <p id="buddies">
+                </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+  </body>
+
+  <script type="text/javascript" src="jsindex.js"></script>
+<!--  <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCk4a85dlSHIcDh6L1BCwDwu0epqlYo8KM&callback=initMap">
+  </script> -->
+  </html>
